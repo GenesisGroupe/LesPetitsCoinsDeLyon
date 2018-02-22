@@ -5,6 +5,9 @@
 
     <TextView
         android:layout_margin="16dp"
+        android:textSize="@dimen/normal_text"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         android:id="@+id/themeName"
         android:layout_gravity="center"
         android:gravity="center"

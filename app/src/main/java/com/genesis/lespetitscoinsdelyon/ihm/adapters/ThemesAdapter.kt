@@ -8,12 +8,13 @@ import android.widget.TextView
 import com.genesis.lespetitscoinsdelyon.R
 import com.genesis.lespetitscoinsdelyon.extensions.inflate
 import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
+import com.genesis.lespetitscoinsdelyon.`interface`.IRecyclerViewInteraction
 
 
 /**
  * Created by hpatural on 22/02/2018.
  */
-class ThemesAdapter(val context: Context, val themes: List<Theme>) : RecyclerView.Adapter<ThemesAdapter.ThemesHolder>() {
+class ThemesAdapter(val context: Context, val themes: List<Theme>, val listener: IRecyclerViewInteraction) : RecyclerView.Adapter<ThemesAdapter.ThemesHolder>() {
 
 
 
@@ -30,6 +31,10 @@ class ThemesAdapter(val context: Context, val themes: List<Theme>) : RecyclerVie
         val theme = themes.get(position)
         if (holder != null) {
             holder.themeName.text = theme.name
+
+            holder.itemView.setOnClickListener({
+                listener.onItemClicked(theme)
+            })
         }
     }
 
@@ -39,5 +44,6 @@ class ThemesAdapter(val context: Context, val themes: List<Theme>) : RecyclerVie
         init {
             this.themeName = row?.findViewById(R.id.themeName)!!
         }
+
     }
 }

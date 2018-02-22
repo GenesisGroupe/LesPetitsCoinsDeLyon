@@ -27,6 +27,8 @@ class MapViewModel {
     init {
         var themes = arrayListOf(Theme("new theme", null))
         availableThemes.onNext(themes)
+
+        selectedThemes.onNext(ArrayList<Item>())
     }
 
     fun selectTheme(theme: Theme) {

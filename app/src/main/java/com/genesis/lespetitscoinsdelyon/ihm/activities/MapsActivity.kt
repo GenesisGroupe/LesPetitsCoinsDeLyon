@@ -3,6 +3,7 @@ package com.genesis.lespetitscoinsdelyon.ihm.activities
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.genesis.lespetitscoinsdelyon.R
+import com.genesis.lespetitscoinsdelyon.viewmodel.Item
 import com.genesis.lespetitscoinsdelyon.viewmodel.MapViewModel
 import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
 
@@ -25,13 +26,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        MapViewModel.getInstance().selectedThemes.subscribe({ itemsList ->
+            drawPins(itemsList = itemsList)
+        })
     }
 
+    private fun drawPins(itemsList: ArrayList<Item>){
+        itemsList.map { mMap.addMarker(MarkerOptions().position(it.localisation).title(it.name)) }
 
-    override fun onResume() {
-        super.onResume()
-        MapViewModel.getInstance().availableThemes.value.add(Theme(name = "Cops", image = null))
-        
     }
 
     /**
@@ -45,7 +47,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
         // Add a marker in Sydney and move the camera
         val sydney = LatLng(-34.0, 151.0)
         mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))

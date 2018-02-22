@@ -1,6 +1,5 @@
 package model
 
-import com.beust.klaxon.Json
 import com.google.android.gms.maps.model.LatLng
 
 /**

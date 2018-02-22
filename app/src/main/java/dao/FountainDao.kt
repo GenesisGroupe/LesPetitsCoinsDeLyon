@@ -1,7 +1,6 @@
 package dao
 
 import android.content.Context
-import com.beust.klaxon.Klaxon
 import com.genesis.lespetitscoinsdelyon.R
 import com.google.android.gms.maps.model.LatLng
 import model.Fountain

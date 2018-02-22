@@ -25,7 +25,5 @@
         android:gravity="center|top"
         tools:context="com.genesis.lespetitscoinsdelyon.ihm.activities.MapsActivity" />
 
-
-
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>
 

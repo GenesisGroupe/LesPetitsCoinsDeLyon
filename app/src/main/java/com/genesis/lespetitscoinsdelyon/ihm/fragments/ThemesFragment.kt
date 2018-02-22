@@ -1,7 +1,9 @@
 package com.genesis.lespetitscoinsdelyon.ihm.fragments
 
 import android.app.Fragment
+import android.graphics.PorterDuff
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
@@ -28,6 +30,8 @@ class ThemesFragment : Fragment() {
         themesRecyclerView.adapter = ThemesAdapter(activity, themes)
         var linearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         themesRecyclerView.layoutManager = linearLayoutManager
+
+        upArrow.setColorFilter(ContextCompat.getColor(activity, R.color.colorPrimaryDark), PorterDuff.Mode.MULTIPLY)
 
     }
 

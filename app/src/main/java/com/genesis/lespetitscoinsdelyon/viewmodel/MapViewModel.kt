@@ -32,8 +32,9 @@ class MapViewModel {
     }
 
     fun selectTheme(theme: Theme) {
-        selectedThemes.value.addAll(hospitals.map({ it.convertToItem() }))
-
+        var items = selectedThemes.value
+        items.addAll(hospitals.map({ it.convertToItem() }))
+        selectedThemes.onNext(items)
     }
 
     fun deselectTheme() {

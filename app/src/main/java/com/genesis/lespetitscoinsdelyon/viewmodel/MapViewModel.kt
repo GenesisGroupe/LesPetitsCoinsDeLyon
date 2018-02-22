@@ -63,7 +63,7 @@ class MapViewModel {
         selectedThemes.onNext(items)
     }
 
-    fun deselectTheme() {
+    fun unseselectTheme() {
         selectedThemes.value.clear()
     }
 }

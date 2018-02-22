@@ -7,5 +7,6 @@ import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
  */
 interface IRecyclerViewInteraction {
 
-    fun onItemClicked(theme: Theme)
+    fun onItemSelected(theme: Theme)
+    fun onItemUnselected(theme: Theme)
 }

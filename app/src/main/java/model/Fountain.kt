@@ -8,15 +8,10 @@ import com.google.android.gms.maps.model.LatLng
  */
 data class Fountain(val id:Int) {
 
-    @Json(name = "nom")
     var nom:String? = null
-    @Json(name = "gestionnaire")
     var gestionnaire:String? = null
-    @Json(name = "anneepose")
     var anneepose:Int? = null
-    @Json(name = "gid")
     val gid:Int = id
-    @Json(name = "the_geom")
     var the_geom:LatLng? = null
 
     constructor( id:Int,  nom:String, anneepose:Int, gestionnaire:String):this(id){

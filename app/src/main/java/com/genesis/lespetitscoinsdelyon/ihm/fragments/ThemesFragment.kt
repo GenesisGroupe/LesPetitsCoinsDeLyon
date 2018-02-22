@@ -48,8 +48,11 @@ class ThemesFragment : Fragment(), IRecyclerViewInteraction {
 
     }
 
-    override fun onItemClicked(theme: Theme) {
+    override fun onItemSelected(theme: Theme) {
         MapViewModel.getInstance().selectTheme(theme)
     }
 
+    override fun onItemUnselected(theme: Theme) {
+        MapViewModel.getInstance().unseselectTheme()
+    }
 }

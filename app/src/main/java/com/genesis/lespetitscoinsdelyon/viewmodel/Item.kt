@@ -5,4 +5,4 @@ import com.google.android.gms.maps.model.LatLng
 
 data class Item (val name: String, val theme: Theme, val localisation: LatLng)
 
-data class Theme(val name: String, val image: Image?)
+data class Theme(val name: String, val image: Image?, var selected: Boolean = false)

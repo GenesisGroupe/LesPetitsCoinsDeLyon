@@ -70,7 +70,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         // Add a marker in Sydney and move the camera
         val bellecour = LatLng(45.759371, 4.832287)
         mMap.moveCamera(CameraUpdateFactory.newLatLng(bellecour))
-        mMap.moveCamera(CameraUpdateFactory.zoomTo(17.0f))
+        mMap.moveCamera(CameraUpdateFactory.zoomTo(12.0f))
 
 
     }

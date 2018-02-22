@@ -63,8 +63,16 @@ class MapViewModel {
         selectedThemes.onNext(items)
     }
 
-    fun unseselectTheme() {
-        selectedThemes.value.clear()
+    fun unseselectTheme(theme: Theme) {
+        var items: ArrayList<Item> = selectedThemes.value
+
+        var themesToDelete = items.map({ item: Item ->
+            if (item.theme == theme) return@map item
+            else print("go die")
+        })
+
+        items.removeAll(themesToDelete)
+        selectedThemes.onNext(items)
     }
 }
 

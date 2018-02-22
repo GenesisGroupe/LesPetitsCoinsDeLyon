@@ -5,8 +5,8 @@ import com.google.android.gms.maps.model.LatLng
 
 data class Item (val name: String, val theme: Theme, val localisation: LatLng?)
 
-enum class Theme {
-    fountains,
-    security,
-    hospitals
+enum class Theme(var selected: Boolean) {
+    fountains(false),
+    security(false),
+    hospitals(false)
 }

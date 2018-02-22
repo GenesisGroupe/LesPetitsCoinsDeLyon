@@ -53,6 +53,6 @@ class ThemesFragment : Fragment(), IRecyclerViewInteraction {
     }
 
     override fun onItemUnselected(theme: Theme) {
-        MapViewModel.getInstance().unseselectTheme()
+        MapViewModel.getInstance().unseselectTheme(theme)
     }
 }

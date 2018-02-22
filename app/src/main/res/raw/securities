@@ -1,0 +1,1017 @@
+{
+  "fields": [
+    "nom",
+    "theme",
+    "soustheme",
+    "identifiant",
+    "idexterne",
+    "siret",
+    "datecreation",
+    "gid"
+  ],
+  "values": [
+    {
+      "nom": "Police Municipale de Tassin-la-Demi-Lune",
+      "datecreation": "1998-06-19",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "1988",
+      "identifiant": "S1417"
+    },
+    {
+      "nom": "Commissariat de Lyon 5",
+      "datecreation": "2002-01-29",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2142",
+      "identifiant": "S4040"
+    },
+    {
+      "nom": "Police Municipale de Lyon 5",
+      "datecreation": "2002-01-29",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2143",
+      "identifiant": "S4041"
+    },
+    {
+      "nom": "Police Nationale de Lyon 2",
+      "datecreation": "2002-01-31",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2144",
+      "identifiant": "S4042"
+    },
+    {
+      "nom": "Gendarmerie de Lyon Brigade Lyon Sud",
+      "datecreation": "2002-01-31",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2145",
+      "identifiant": "S4043"
+    },
+    {
+      "nom": "Gendarmerie de Francheville",
+      "datecreation": "2002-03-01",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2155",
+      "identifiant": "S4089"
+    },
+    {
+      "nom": "Police Municipale de La Mulati\u00e8re",
+      "datecreation": "2002-03-01",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2156",
+      "identifiant": "S4090"
+    },
+    {
+      "nom": "Police Municipale de Sainte-Foy-Les-Lyon",
+      "datecreation": "2002-03-04",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2158",
+      "identifiant": "S4092"
+    },
+    {
+      "nom": "Gendarmerie de Sathonay-Camp",
+      "datecreation": "2002-03-05",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2265",
+      "identifiant": "S4093"
+    },
+    {
+      "nom": "Police Municipale de Pierre-B\u00e9nite",
+      "datecreation": "2002-03-06",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2266",
+      "identifiant": "S4094"
+    },
+    {
+      "nom": "Police Municipale d'Oullins",
+      "datecreation": "2002-03-06",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2267",
+      "identifiant": "S4096"
+    },
+    {
+      "nom": "Commissariat d'Oullins",
+      "datecreation": "2002-03-06",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2268",
+      "identifiant": "S4097"
+    },
+    {
+      "nom": "Commissariat de Vaulx-en-Velin",
+      "datecreation": "2002-03-06",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2269",
+      "identifiant": "S4098"
+    },
+    {
+      "nom": "Police Nationale de Rillieux-la-Pape",
+      "datecreation": "2002-03-11",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2270",
+      "identifiant": "S4099"
+    },
+    {
+      "nom": "Police Municipale de Rillieux-la-Pape",
+      "datecreation": "2002-03-11",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2271",
+      "identifiant": "S4100"
+    },
+    {
+      "nom": "Police Municipale de Feyzin",
+      "datecreation": "2002-02-01",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2294",
+      "identifiant": "S4050"
+    },
+    {
+      "nom": "Police Municipale de Saint-Fons",
+      "datecreation": "2002-02-04",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2295",
+      "identifiant": "S4052"
+    },
+    {
+      "nom": "Police Municipale de Chassieu",
+      "datecreation": "2002-02-06",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2296",
+      "identifiant": "S4053"
+    },
+    {
+      "nom": "Gendarmerie de Corbas",
+      "datecreation": "2002-02-06",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2300",
+      "identifiant": "S4058"
+    },
+    {
+      "nom": "Police Municipale de Corbas",
+      "datecreation": "2002-02-07",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2301",
+      "identifiant": "S4059"
+    },
+    {
+      "nom": "Gendarmerie de Fontaines-sur-Sa\u00f4ne",
+      "datecreation": "2002-03-11",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2306",
+      "identifiant": "S4105"
+    },
+    {
+      "nom": "Gendarmerie de Dardilly",
+      "datecreation": "2002-02-08",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2418",
+      "identifiant": "S4060"
+    },
+    {
+      "nom": "Police Municipale de Marcy l'Etoile",
+      "datecreation": "2002-02-08",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2419",
+      "identifiant": "S4061"
+    },
+    {
+      "nom": "Police Municipale de Mions",
+      "datecreation": "2002-02-11",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2420",
+      "identifiant": "S4064"
+    },
+    {
+      "nom": "Gendarmerie de Neuville-sur-Sa\u00f4ne",
+      "datecreation": "2002-02-14",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2421",
+      "identifiant": "S4065"
+    },
+    {
+      "nom": "Police Municipale de Champagne-au-Mont-d'Or",
+      "datecreation": "2002-02-19",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2451",
+      "identifiant": "S4070"
+    },
+    {
+      "nom": "Police Nationale",
+      "datecreation": "2002-02-20",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2452",
+      "identifiant": "S4071"
+    },
+    {
+      "nom": "H\u00f4tel de Police de Lyon",
+      "datecreation": "2002-01-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2483",
+      "identifiant": "S4010"
+    },
+    {
+      "nom": "Commissariat de Lyon 2",
+      "datecreation": "2002-01-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2484",
+      "identifiant": "S4012"
+    },
+    {
+      "nom": "Commissariat de Lyon 4",
+      "datecreation": "2002-01-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2485",
+      "identifiant": "S4014"
+    },
+    {
+      "nom": "Police Nationale Lyon 4",
+      "datecreation": "2002-01-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2486",
+      "identifiant": "S4015"
+    },
+    {
+      "nom": "Police Municipale de Lyon 4",
+      "datecreation": "2002-01-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2487",
+      "identifiant": "S4016"
+    },
+    {
+      "nom": "Police Municipale d'Irigny",
+      "datecreation": "2002-01-23",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2490",
+      "identifiant": "S4019"
+    },
+    {
+      "nom": "Police Municipale de V\u00e9nissieux",
+      "datecreation": "2002-01-23",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2492",
+      "identifiant": "S4022"
+    },
+    {
+      "nom": "Police Municipale de Lyon 1",
+      "datecreation": "2002-01-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2493",
+      "identifiant": "S4024"
+    },
+    {
+      "nom": "Gendarmerie de Tassin-la-Demi-Lune",
+      "datecreation": "2002-02-20",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2583",
+      "identifiant": "S4073"
+    },
+    {
+      "nom": "Police Municipale de Lyon 2",
+      "datecreation": "2002-01-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2603",
+      "identifiant": "S4025"
+    },
+    {
+      "nom": "Police Municipale de Lyon 3",
+      "datecreation": "2002-01-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2604",
+      "identifiant": "S4026"
+    },
+    {
+      "nom": "Police Municipale de Lyon 6",
+      "datecreation": "2002-01-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2605",
+      "identifiant": "S4027"
+    },
+    {
+      "nom": "Police Municipale de Lyon 7 Annexe Guilloti\u00e8re",
+      "datecreation": "2002-01-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2606",
+      "identifiant": "S4028"
+    },
+    {
+      "nom": "Commissariat de Lyon 9",
+      "datecreation": "2002-01-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2607",
+      "identifiant": "S4029"
+    },
+    {
+      "nom": "Police Municipale de Lyon 8",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2608",
+      "identifiant": "S4030"
+    },
+    {
+      "nom": "Police Municipale de Lyon 9",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2609",
+      "identifiant": "S4031"
+    },
+    {
+      "nom": "Police Municipale de Lyon 2 Annexe Thomassin",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2610",
+      "identifiant": "S4032"
+    },
+    {
+      "nom": "Police Nationale de Lyon 3",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2611",
+      "identifiant": "S4033"
+    },
+    {
+      "nom": "Police Municipale de Lyon 3 Annexe Part-Dieu",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2612",
+      "identifiant": "S4034"
+    },
+    {
+      "nom": "Police Municipale de Lyon 7 Annexe Gerland",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2613",
+      "identifiant": "S4036"
+    },
+    {
+      "nom": "Police Municipale de Lyon 9 Annexe Duch\u00e8re",
+      "datecreation": "2002-01-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2614",
+      "identifiant": "S4037"
+    },
+    {
+      "nom": "Commissariat de Saint-Priest",
+      "datecreation": "2002-02-20",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2615",
+      "identifiant": "S4074"
+    },
+    {
+      "nom": "Gendarmerie de Bron",
+      "datecreation": "2002-02-20",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2616",
+      "identifiant": "S4075"
+    },
+    {
+      "nom": "Commissariat de Bron",
+      "datecreation": "2002-02-20",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2617",
+      "identifiant": "S4076"
+    },
+    {
+      "nom": "Police Municipale de Saint-Genis-Laval",
+      "datecreation": "2002-02-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2618",
+      "identifiant": "S4078"
+    },
+    {
+      "nom": "Gendarmerie de Saint-Genis-Laval",
+      "datecreation": "2002-02-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2619",
+      "identifiant": "S4079"
+    },
+    {
+      "nom": "Gendarmerie de Limonest",
+      "datecreation": "2002-02-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2620",
+      "identifiant": "S4080"
+    },
+    {
+      "nom": "Police Municipale",
+      "datecreation": "2018-01-15",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "2771",
+      "identifiant": "S7758"
+    },
+    {
+      "nom": "H\u00f4tel de Police Lyon 3",
+      "datecreation": "2008-09-04",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3371",
+      "identifiant": "S5067"
+    },
+    {
+      "nom": "Gendarmerie de Givors",
+      "datecreation": "2008-03-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3444",
+      "identifiant": "S5034"
+    },
+    {
+      "nom": "Police Minicipale de Craponne",
+      "datecreation": "2007-06-28",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3516",
+      "identifiant": "S4893"
+    },
+    {
+      "nom": "Commissariat de Givors",
+      "datecreation": "2008-03-25",
+      "siret": "17690151000154",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3550",
+      "identifiant": "S5037"
+    },
+    {
+      "nom": "Police Municipale de Charly",
+      "datecreation": "2007-10-10",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3652",
+      "identifiant": "S4960"
+    },
+    {
+      "nom": "Commissariat de Meyzieu",
+      "datecreation": "2008-03-14",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3699",
+      "identifiant": "S5004"
+    },
+    {
+      "nom": "Commissariat Lyon 1",
+      "datecreation": "2010-02-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3716",
+      "identifiant": "S5203"
+    },
+    {
+      "nom": "Commissariat de Lyon 6",
+      "datecreation": "2010-03-31",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3717",
+      "identifiant": "S5204"
+    },
+    {
+      "nom": "Commissariat de Police",
+      "datecreation": "2009-05-26",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3766",
+      "identifiant": "S5171"
+    },
+    {
+      "nom": "Commissariat de Lyon 3",
+      "datecreation": "2008-06-26",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3811",
+      "identifiant": "S5065"
+    },
+    {
+      "nom": "Police Municipale de Vernaison",
+      "datecreation": "2007-08-30",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "3882",
+      "identifiant": "S4917"
+    },
+    {
+      "nom": "Police Municipale de Grigny",
+      "datecreation": "2011-01-31",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4557",
+      "identifiant": "S5428"
+    },
+    {
+      "nom": "Police Municipale de Grigny",
+      "datecreation": "2011-01-31",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4558",
+      "identifiant": "S5429"
+    },
+    {
+      "nom": "Police Municipale d'Albigny-sur-Sa\u00f4ne",
+      "datecreation": "2011-11-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4593",
+      "identifiant": "S5547"
+    },
+    {
+      "nom": "Police Municipale de Caluire-et-Cuire",
+      "datecreation": "2011-11-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4594",
+      "identifiant": "S5548"
+    },
+    {
+      "nom": "Commissariat de Caluire-et-Cuire",
+      "datecreation": "2011-11-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4595",
+      "identifiant": "S5549"
+    },
+    {
+      "nom": "Police Municipale d'Ecully",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4596",
+      "identifiant": "S5551"
+    },
+    {
+      "nom": "Police Municipale de Francheville",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4597",
+      "identifiant": "S5552"
+    },
+    {
+      "nom": "Police Municipale de Dardilly",
+      "datecreation": "2011-11-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4601",
+      "identifiant": "S5550"
+    },
+    {
+      "nom": "Police Municipale de Genay",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4655",
+      "identifiant": "S5553"
+    },
+    {
+      "nom": "Police Municipale de Jonage",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4656",
+      "identifiant": "S5554"
+    },
+    {
+      "nom": "Police Municipale de La Tour de Salvagny",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4657",
+      "identifiant": "S5555"
+    },
+    {
+      "nom": "Police Municipale de Meyzieu",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4658",
+      "identifiant": "S5556"
+    },
+    {
+      "nom": "Police Municipale de Neuville-sur-Sa\u00f4ne",
+      "datecreation": "2011-11-22",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4659",
+      "identifiant": "S5557"
+    },
+    {
+      "nom": "Police Municipale de Saint-Cyr-au-Mont-d'Or",
+      "datecreation": "2011-11-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4661",
+      "identifiant": "S5559"
+    },
+    {
+      "nom": "Police Municipale de Saint-Didier-au-Mont-d'Or",
+      "datecreation": "2011-11-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4662",
+      "identifiant": "S5560"
+    },
+    {
+      "nom": "Police Municipale de Saint-Priest",
+      "datecreation": "2011-11-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4663",
+      "identifiant": "S5561"
+    },
+    {
+      "nom": "Police Municipale de Solaize",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4682",
+      "identifiant": "S5562"
+    },
+    {
+      "nom": "Commissariat de V\u00e9nissieux",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4684",
+      "identifiant": "S5565"
+    },
+    {
+      "nom": "Police Municipale de Lyon 7",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4685",
+      "identifiant": "S5566"
+    },
+    {
+      "nom": "Commissariat de Lyon 7",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4686",
+      "identifiant": "S5567"
+    },
+    {
+      "nom": "Commissariat de Lyon 8",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4687",
+      "identifiant": "S5568"
+    },
+    {
+      "nom": "Police Munipale de Limonest",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4756",
+      "identifiant": "S5569"
+    },
+    {
+      "nom": "Police Municipale de D\u00e9cines-Charpieu",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4757",
+      "identifiant": "S5570"
+    },
+    {
+      "nom": "Police Municipale de Saint-Genis-les-Olli\u00e8res",
+      "datecreation": "2011-11-25",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4758",
+      "identifiant": "S5571"
+    },
+    {
+      "nom": "Police Technique et Scientifique",
+      "datecreation": "2011-12-08",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4780",
+      "identifiant": "S5577"
+    },
+    {
+      "nom": "Interpol",
+      "datecreation": "2014-06-19",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4798",
+      "identifiant": "S5694"
+    },
+    {
+      "nom": "Gendarmerie d'Irigny",
+      "datecreation": "2004-09-24",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "4812",
+      "identifiant": "S4506"
+    },
+    {
+      "nom": "Police Municipale",
+      "datecreation": "2005-12-05",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "5029",
+      "identifiant": "S4721"
+    },
+    {
+      "nom": "Gendarmerie de Jonage",
+      "datecreation": "2006-07-21",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "5085",
+      "identifiant": "S4772"
+    },
+    {
+      "nom": "Police Municipale de Lyon 9",
+      "datecreation": "2006-11-16",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "5322",
+      "identifiant": "S4791"
+    },
+    {
+      "nom": "Police Municipale de Bron",
+      "datecreation": "2011-04-05",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "6079",
+      "identifiant": "S5454"
+    },
+    {
+      "nom": "Police Nationale de D\u00e9cines-Charpieu",
+      "datecreation": "2012-12-26",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "6115",
+      "identifiant": "S5630"
+    },
+    {
+      "nom": "Gendarmerie de Mions",
+      "datecreation": "2011-05-19",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "6201",
+      "identifiant": "S5463"
+    },
+    {
+      "nom": "Police Municipale de Villeurbanne",
+      "datecreation": "2012-10-10",
+      "siret": "None",
+      "theme": "URGENCE",
+      "idexterne": "None",
+      "soustheme": "Police Gendarmerie",
+      "gid": "6522",
+      "identifiant": "S5621"
+    }
+  ],
+  "nb_results": 100,
+  "table_href": "https://download.data.grandlyon.com/ws/grandlyon/adr_voie_lieu.adrsecurite.json",
+  "layer_name": "adr_voie_lieu.adrsecurite"
+}

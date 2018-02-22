@@ -1,7 +1,9 @@
 package com.genesis.lespetitscoinsdelyon.viewmodel
 
+import com.google.android.gms.maps.model.LatLng
 import io.reactivex.subjects.BehaviorSubject
 import model.Hospital
+
 
 class MapViewModel {
 
@@ -16,20 +18,20 @@ class MapViewModel {
         }
     }
 
-    private val hospitals = arrayListOf(Hospital("Hotel dieu",  "Clerge"), Hospital("Imothep", "egyptien"))
+    private val hospitals = arrayListOf(Hospital("Hotel dieu",  "Clerge", LatLng(45.782127, 4.830640)),
+            Hospital("Imothep", "egyptien", LatLng(45.749795, 4.835662)))
 
-    var selectedThemes  = BehaviorSubject.create<ArrayList<Item>>()
-    var availableThemes: BehaviorSubject<ArrayList<Theme>> = BehaviorSubject.create()
+    var selectedThemes  : BehaviorSubject<ArrayList<Item>> = BehaviorSubject.create()
+    var availableThemes : BehaviorSubject<ArrayList<Theme>> = BehaviorSubject.create()
 
     init {
         var themes = arrayListOf(Theme("new theme", null))
         availableThemes.onNext(themes)
     }
 
-    fun selectTheme() {
-        if (selectedThemes.value.size == 0) {
-            selectedThemes.value.plus(elements = hospitals.map({ it.convertToItem() }))
-        }
+    fun selectTheme(theme: Theme) {
+        selectedThemes.value.addAll(hospitals.map({ it.convertToItem() }))
+
     }
 
     fun deselectTheme() {
@@ -39,5 +41,5 @@ class MapViewModel {
 
 
 fun Hospital.convertToItem(): Item {
-    return Item(this.nom, Theme(this.theme, null), "ici")
+    return Item(this.nom, Theme(this.theme, null), this.coords)
 }

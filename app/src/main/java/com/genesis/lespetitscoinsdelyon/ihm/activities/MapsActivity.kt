@@ -3,6 +3,8 @@ package com.genesis.lespetitscoinsdelyon.ihm.activities
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.genesis.lespetitscoinsdelyon.R
+import com.genesis.lespetitscoinsdelyon.viewmodel.MapViewModel
+import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -22,6 +24,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        MapViewModel.getInstance().availableThemes.value.add(Theme(name = "Cops", image = null))
+        
     }
 
     /**

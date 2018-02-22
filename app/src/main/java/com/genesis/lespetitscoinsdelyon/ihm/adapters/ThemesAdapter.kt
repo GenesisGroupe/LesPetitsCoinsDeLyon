@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.genesis.lespetitscoinsdelyon.R
 import com.genesis.lespetitscoinsdelyon.extensions.inflate
+import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
 
 
 /**
  * Created by hpatural on 22/02/2018.
  */
-class ThemesAdapter(val context: Context, val themes: List<String>) : RecyclerView.Adapter<ThemesAdapter.ThemesHolder>() {
+class ThemesAdapter(val context: Context, val themes: List<Theme>) : RecyclerView.Adapter<ThemesAdapter.ThemesHolder>() {
 
 
 
@@ -28,7 +29,7 @@ class ThemesAdapter(val context: Context, val themes: List<String>) : RecyclerVi
     override fun onBindViewHolder(holder: ThemesHolder?, position: Int) {
         val theme = themes.get(position)
         if (holder != null) {
-            holder.themeName.text = theme
+            holder.themeName.text = theme.name
         }
     }
 

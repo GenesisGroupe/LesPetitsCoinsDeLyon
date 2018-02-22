@@ -1,24 +1,29 @@
 package com.genesis.lespetitscoinsdelyon.viewmodel
 
-/**
- * Created by Sylvain on 22/02/2018.
- */
-
-import io.reactivex.Observable
-import io.reactivex.rxkotlin;
-import io.reactivex.rxkotlin.toObservable
 import io.reactivex.subjects.BehaviorSubject
-import io.reactivex.subjects.PublishSubject
 import model.Hospital
 
 class MapViewModel {
-    val hospitals = arrayListOf(Hospital("Hotel dieu",  "Clerge"), Hospital("Imothep", "egyptien"))
 
-    var selectedThemes = BehaviorSubject.create<ArrayList<Item>>()
+    companion object {
+        private var shared: MapViewModel = MapViewModel()
 
+        fun getInstance():MapViewModel {
+            if (shared == null) {
+                shared = MapViewModel()
+            }
+            return shared
+        }
+    }
 
-    fun getThemes() {
-        return "hospitals"
+    private val hospitals = arrayListOf(Hospital("Hotel dieu",  "Clerge"), Hospital("Imothep", "egyptien"))
+
+    var selectedThemes  = BehaviorSubject.create<ArrayList<Item>>()
+    var availableThemes: BehaviorSubject<ArrayList<Theme>> = BehaviorSubject.create()
+
+    init {
+        var themes = arrayListOf(Theme("new theme", null))
+        availableThemes.onNext(themes)
     }
 
     fun selectTheme() {
@@ -34,5 +39,5 @@ class MapViewModel {
 
 
 fun Hospital.convertToItem(): Item {
-    return Item(this.nom, Theme(this.theme, null))
+    return Item(this.nom, Theme(this.theme, null), "ici")
 }

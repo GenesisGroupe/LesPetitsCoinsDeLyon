@@ -1,7 +1,8 @@
-package com.genesis.lespetitscoinsdelyon
+package com.genesis.lespetitscoinsdelyon.ihm.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.genesis.lespetitscoinsdelyon.R
 
 /**
  * Created by hpatural on 22/02/2018.

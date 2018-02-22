@@ -1,0 +1,861 @@
+{
+
+    "fields":[
+        "nom",
+        "gestionnaire",
+        "anneepose",
+        "gid"
+    ],
+    "values":[
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57442",
+            "gid":"1",
+            "anneepose":"2001"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V14725",
+            "gid":"2",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18095",
+            "gid":"3",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19778",
+            "gid":"4",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19463",
+            "gid":"5",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19695",
+            "gid":"6",
+            "anneepose":"1997"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V10225",
+            "gid":"7",
+            "anneepose":"1998"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19777",
+            "gid":"8",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V16044",
+            "gid":"9",
+            "anneepose":"1996"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V61143",
+            "gid":"10",
+            "anneepose":"2014"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V59588",
+            "gid":"11",
+            "anneepose":"2009"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6429",
+            "gid":"12",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V2261",
+            "gid":"13",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V5945",
+            "gid":"14",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18365",
+            "gid":"15",
+            "anneepose":"1992"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V5620",
+            "gid":"16",
+            "anneepose":"1992"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19307",
+            "gid":"17",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V58295",
+            "gid":"18",
+            "anneepose":"2002"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19779",
+            "gid":"19",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V54901",
+            "gid":"20",
+            "anneepose":"1994"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6258",
+            "gid":"21",
+            "anneepose":"1988"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V16119",
+            "gid":"22",
+            "anneepose":"1995"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19983",
+            "gid":"23",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V4279",
+            "gid":"24",
+            "anneepose":"1999"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18782",
+            "gid":"25",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V9150",
+            "gid":"26",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6094",
+            "gid":"27",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6570",
+            "gid":"28",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57399",
+            "gid":"29",
+            "anneepose":"2001"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6079",
+            "gid":"30",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19399",
+            "gid":"31",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V599",
+            "gid":"32",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18438",
+            "gid":"33",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V10143",
+            "gid":"34",
+            "anneepose":"1995"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V59902",
+            "gid":"35",
+            "anneepose":"2011"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19776",
+            "gid":"36",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18204",
+            "gid":"37",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19301",
+            "gid":"38",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18200",
+            "gid":"39",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V61214",
+            "gid":"40",
+            "anneepose":"2014"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V10272",
+            "gid":"41",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V54785",
+            "gid":"42",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V59916",
+            "gid":"43",
+            "anneepose":"2006"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V58674",
+            "gid":"44",
+            "anneepose":"2005"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57446",
+            "gid":"45",
+            "anneepose":"1995"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V14989",
+            "gid":"46",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V199526",
+            "gid":"47",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57655",
+            "gid":"48",
+            "anneepose":"1995"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V11726",
+            "gid":"49",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V63079",
+            "gid":"50",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V11753",
+            "gid":"51",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L660",
+            "gid":"52",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L666",
+            "gid":"53",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L657",
+            "gid":"54",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L661",
+            "gid":"55",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V58369",
+            "gid":"56",
+            "anneepose":"2004"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L375",
+            "gid":"57",
+            "anneepose":"2002"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L379",
+            "gid":"58",
+            "anneepose":"1989"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V2846",
+            "gid":"59",
+            "anneepose":"1900"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15089",
+            "gid":"60",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L372",
+            "gid":"61",
+            "anneepose":"2009"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L723",
+            "gid":"62",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15093",
+            "gid":"63",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57070",
+            "gid":"64",
+            "anneepose":"2000"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60049",
+            "gid":"65",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V21510",
+            "gid":"66",
+            "anneepose":"1998"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V8047",
+            "gid":"67",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V4131",
+            "gid":"68",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L376",
+            "gid":"69",
+            "anneepose":"2005"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V21776",
+            "gid":"70",
+            "anneepose":"2000"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60135",
+            "gid":"71",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60193",
+            "gid":"72",
+            "anneepose":"2013"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60194",
+            "gid":"73",
+            "anneepose":"2013"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V14563",
+            "gid":"74",
+            "anneepose":"1987"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60140",
+            "gid":"75",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60061",
+            "gid":"76",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60126",
+            "gid":"77",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60408",
+            "gid":"78",
+            "anneepose":"2013"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15619",
+            "gid":"79",
+            "anneepose":"1991"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V17795",
+            "gid":"80",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V17136",
+            "gid":"81",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15513",
+            "gid":"82",
+            "anneepose":"2014"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V17080",
+            "gid":"83",
+            "anneepose":"1999"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V56592",
+            "gid":"84",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V17128",
+            "gid":"85",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V18019",
+            "gid":"86",
+            "anneepose":"1988"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V17008",
+            "gid":"87",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15693",
+            "gid":"88",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19780",
+            "gid":"89",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V19013",
+            "gid":"90",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15146",
+            "gid":"91",
+            "anneepose":"1986"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57652",
+            "gid":"92",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V9739",
+            "gid":"93",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V199389",
+            "gid":"94",
+            "anneepose":"2014"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V13660",
+            "gid":"95",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V13954",
+            "gid":"96",
+            "anneepose":"1996"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V13697",
+            "gid":"97",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V10499",
+            "gid":"98",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6004",
+            "gid":"99",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57766",
+            "gid":"100",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60186",
+            "gid":"101",
+            "anneepose":"2012"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V60198",
+            "gid":"102",
+            "anneepose":"2012"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V4014",
+            "gid":"103",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V14244",
+            "gid":"104",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V11627",
+            "gid":"105",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57210",
+            "gid":"106",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57441",
+            "gid":"107",
+            "anneepose":"2001"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V9847",
+            "gid":"108",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15211",
+            "gid":"109",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15335",
+            "gid":"110",
+            "anneepose":"2001"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V15349",
+            "gid":"111",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V16388",
+            "gid":"112",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V16177",
+            "gid":"113",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V21521",
+            "gid":"114",
+            "anneepose":"1997"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V16410",
+            "gid":"115",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V21546",
+            "gid":"116",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V59225",
+            "gid":"117",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V21184",
+            "gid":"118",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57859",
+            "gid":"119",
+            "anneepose":"2002"
+        },
+        {
+            "gestionnaire":"Grand Lyon",
+            "nom":"A99900001",
+            "gid":"120",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Grand Lyon",
+            "nom":"A16300000",
+            "gid":"121",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Grand Lyon",
+            "nom":"A11700000",
+            "gid":"122",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V4015",
+            "gid":"123",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V4092",
+            "gid":"124",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V13118",
+            "gid":"125",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V11324",
+            "gid":"126",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V6670",
+            "gid":"127",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L374",
+            "gid":"128",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L378",
+            "gid":"129",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L721",
+            "gid":"130",
+            "anneepose":"2013"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L373",
+            "gid":"131",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"L731",
+            "gid":"132",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V59751",
+            "gid":"133",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V57251",
+            "gid":"134",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V897",
+            "gid":"135",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V809",
+            "gid":"136",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V8470",
+            "gid":"137",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V7919",
+            "gid":"138",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V8527",
+            "gid":"139",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V2778",
+            "gid":"140",
+            "anneepose":"None"
+        },
+        {
+            "gestionnaire":"Veolia Eau",
+            "nom":"V59185",
+            "gid":"141",
+            "anneepose":"2008"
+        }
+    ],
+    "nb_results":141,
+    "table_href":"https://download.data.grandlyon.com/ws/grandlyon/epo_eau_potable.epobornefont.json",
+    "layer_name":"epo_eau_potable.epobornefont"
+
+}

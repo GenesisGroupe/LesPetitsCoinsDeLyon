@@ -18,9 +18,6 @@ class MapViewModel {
         private var shared: MapViewModel = MapViewModel()
 
         fun getInstance():MapViewModel {
-            if (shared == null) {
-                shared = MapViewModel()
-            }
             return shared
         }
     }

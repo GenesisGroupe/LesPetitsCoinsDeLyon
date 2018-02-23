@@ -1,6 +1,5 @@
 package com.genesis.lespetitscoinsdelyon.ihm.activities
 
-import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.genesis.lespetitscoinsdelyon.R
@@ -14,12 +13,15 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
 
+    private var currentMarkersOptions = ArrayList<MarkerOptions>()
+    private var currentMarkers = ArrayList<Marker>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
@@ -28,33 +30,46 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        MapViewModel.getInstance().selectedThemes.subscribe({ itemsList ->
+        MapViewModel.getInstance().selectedThemes
+                .skip(1)
+                .subscribe({ itemsList ->
             drawPins(itemsList = itemsList)
         })
     }
 
     private fun drawPins(itemsList: ArrayList<Item>){
-
+        if (mMap != null) {
+            mMap.clear()
+        }
         itemsList.map {
-            if (it.localisation != null) {
-                var marker = MarkerOptions().position(it.localisation).title(it.name)
-                when (it.theme) {
-                    Theme.hospitals -> {
-                        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-                    }
-                    Theme.security -> {
-                        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                    }
-                    Theme.fountains -> {
-                        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
-                    }
-                }
-                mMap.addMarker(marker)
-
+            val markerOption = markerFromItem(it)
+            if (markerOption != null) {
+                currentMarkersOptions.add(markerOption)
+                currentMarkers.add(mMap.addMarker(markerOption))
             }
         }
-
     }
+
+    private fun markerFromItem(item: Item): MarkerOptions? {
+        var marker: MarkerOptions? = null
+        if (item.localisation != null) {
+
+            marker = MarkerOptions().position(item.localisation).title(item.name)
+            when (item.theme) {
+                Theme.hospitals -> {
+                    marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                }
+                Theme.security -> {
+                    marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+                }
+                Theme.fountains -> {
+                    marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                }
+            }
+        }
+        return marker
+    }
+
 
     /**
      * Manipulates the map once available.

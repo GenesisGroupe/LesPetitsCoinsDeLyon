@@ -1,9 +1,12 @@
 package com.genesis.lespetitscoinsdelyon.ihm.activities
 
+import android.content.Context
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.genesis.lespetitscoinsdelyon.R
 import com.genesis.lespetitscoinsdelyon.viewmodel.Item
+import com.genesis.lespetitscoinsdelyon.viewmodel.Item2D
 import com.genesis.lespetitscoinsdelyon.viewmodel.MapViewModel
 import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
 
@@ -15,6 +18,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolygonOptions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -34,6 +38,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .skip(1)
                 .subscribe({ itemsList ->
             drawPins(itemsList = itemsList)
+        })
+
+        MapViewModel.getInstance().selectedThemes2D.subscribe({ itemsList ->
+            drawPolygons(items2Dlist = itemsList)
         })
     }
 
@@ -70,6 +78,23 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         return marker
     }
 
+    private fun drawPolygons(items2Dlist:ArrayList<Item2D>){
+        items2Dlist.map {
+            if (it.polygon != null) {
+                var polygonOpt = PolygonOptions()
+                polygonOpt.addAll(it.polygon)
+                when (it.theme) {
+
+                    Theme.security -> {
+                        polygonOpt.strokeColor(Color.BLUE)
+                        polygonOpt.fillColor(Color.parseColor("#880000FF"))
+                    }
+                }
+                mMap.addPolygon(polygonOpt)
+
+            }
+        }
+    }
 
     /**
      * Manipulates the map once available.

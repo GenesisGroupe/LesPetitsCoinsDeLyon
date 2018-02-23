@@ -26,21 +26,17 @@ class MapViewModel {
 
     init {
 
-        var themes = arrayListOf(Theme.fountains, Theme.security, Theme.hospitals)
+        val themes = arrayListOf(Theme.fountains, Theme.security, Theme.hospitals)
         availableThemes.onNext(themes)
 
         selectedThemes.onNext(ArrayList<Item>())
         selectedThemes2D.onNext(ArrayList<Item2D>())
-
-        var fountainDao = FountainDao(MyApplication.context)
-        fountainDao.list
-
     }
 
     fun selectTheme(theme: Theme) {
 
-        var items = selectedThemes.value
-        var items2D = selectedThemes2D.value
+        val items = selectedThemes.value
+        val items2D = selectedThemes2D.value
         var list:List<Item> = ArrayList<Item>()
         var list2D:List<Item2D> = ArrayList<Item2D>()
         when (theme) {
@@ -56,9 +52,6 @@ class MapViewModel {
                 val dao = HospitalDao(MyApplication.context)
                 list = dao.list.map({ it.convertToItem() })
             }
-            else -> {
-                list = ArrayList()
-            }
 
         }
         items.addAll(list)
@@ -68,14 +61,14 @@ class MapViewModel {
     }
 
     fun unseselectTheme(theme: Theme) {
-        var items: ArrayList<Item> = selectedThemes.value
-        var items2D: ArrayList<Item2D> = selectedThemes2D.value
+        val items: ArrayList<Item> = selectedThemes.value
+        val items2D: ArrayList<Item2D> = selectedThemes2D.value
 
-        var themesToDelete = items.map({ item: Item ->
+        val themesToDelete = items.map({ item: Item ->
             if (item.theme == theme) return@map item
             else print("go die")
         })
-        var themesToDelete2D = items2D.map({ item: Item2D ->
+        val themesToDelete2D = items2D.map({ item: Item2D ->
             if (item.theme == theme) return@map item
             else print("go die")
         })

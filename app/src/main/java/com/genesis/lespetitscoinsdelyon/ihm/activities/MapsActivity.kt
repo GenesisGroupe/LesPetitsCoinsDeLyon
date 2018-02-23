@@ -3,7 +3,6 @@ package com.genesis.lespetitscoinsdelyon.ihm.activities
 import android.Manifest
 import android.content.pm.PackageManager
 import android.location.Location
-import android.content.Context
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -26,7 +25,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import io.reactivex.Observable
+
 import io.reactivex.rxkotlin.Observables
 import io.reactivex.subjects.BehaviorSubject
 import java.util.*
@@ -37,11 +36,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
 
 
     private lateinit var mMap: GoogleMap
-    var currentPosition  : BehaviorSubject<Location> = BehaviorSubject.create()
+    private var currentPosition  : BehaviorSubject<Location> = BehaviorSubject.create()
 
     companion object {
-        val MIN_DISTANCE = 900
-        val MY_PERMISSIONS_REQUEST_LOCATION = 99
+        const val MIN_DISTANCE = 900
+        const val MY_PERMISSIONS_REQUEST_LOCATION = 99
 
     }
 
@@ -81,19 +80,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
             mMap.clear()
         }
         itemsList.map {
+
             if (it.localisation != null) {
 
                 //Filter on distance < 500m from user
-                var tempLocation = Location("")
+                val tempLocation = Location("")
                 tempLocation.latitude = it.localisation.latitude
                 tempLocation.longitude = it.localisation.longitude
 
                 if (currentPosition == null) {
-                    return
+                    return@map
                 }
 
                 if (tempLocation.distanceTo(currentLocation) < MIN_DISTANCE) {
-                    var marker = markerFromItem(it)
+                    val marker = markerFromItem(it)
                     if (marker != null) {
                         // marker is in radius
                         // if it is already drawned, do nothing
@@ -101,7 +101,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
                         val markerOption = markerExistOnMap(marker)
                         if (markerOption != null) {
                             // already draw, return
-                            return
+                            return@map
                         }
                         addMarker(marker)
 
@@ -116,10 +116,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
     private fun removeMarker(item: Item) {
         try {
             val drawnedMarker = currentMarkers.first {
-                it.title == item.gid.toString()
+                it.title == item.name
             }
             drawnedMarker.remove()
             currentMarkers.remove(drawnedMarker)
+            val drownMarkerOption = currentMarkersOptions.first{
+                it.title == item.name
+            }
+            currentMarkersOptions.remove(drownMarkerOption)
+
         } catch(e: Exception) {
 
         }
@@ -128,11 +133,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
 
     private fun markerExistOnMap(markerOption: MarkerOptions): MarkerOptions? {
         try {
-            val alreadyDrawnedPin = currentMarkersOptions.first {
-                Log.d("Marker", "title : " + it.title + " - markerOption.title : " + markerOption.title)
+            return currentMarkersOptions.first {
                 it.title == markerOption.title
             }
-            return alreadyDrawnedPin
         } catch (e: NoSuchElementException) {
             return null
         }
@@ -149,18 +152,16 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
         items2Dlist.map {
             if (it.polygon != null && it.polygon.size > 0) {
                 //Filter on distance < 500m from user
-                var tempLocation = Location("")
+                val tempLocation = Location("")
                 tempLocation.latitude = it.polygon.first().latitude
                 tempLocation.longitude = it.polygon.first().longitude
 
                 if (tempLocation.distanceTo(currentLocation) < MIN_DISTANCE) {
-                    var polygonOpt = PolygonOptions()
+                    val polygonOpt = PolygonOptions()
                     polygonOpt.addAll(it.polygon)
-                    when (it.theme) {
-                        Theme.security -> {
-                            polygonOpt.strokeColor(Color.BLUE)
-                            polygonOpt.fillColor(Color.parseColor("#880000FF"))
-                        }
+                    if (it.theme == Theme.security) {
+                        polygonOpt.strokeColor(Color.BLUE)
+                        polygonOpt.fillColor(Color.parseColor("#880000FF"))
                     }
                     mMap.addPolygon(polygonOpt)
                 }
@@ -172,7 +173,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
         var marker: MarkerOptions? = null
         if (item.localisation != null) {
 
-            marker = MarkerOptions().position(item.localisation).title(item.gid.toString())
+            marker = MarkerOptions().position(item.localisation).title(item.name)
             when (item.theme) {
                 Theme.hospitals -> {
                     marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
@@ -241,7 +242,5 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
 
     override fun onLocationChanged(location: Location) {
         currentPosition.onNext(location)
-        val latLng = LatLng(location.latitude, location.longitude)
-
     }
 }

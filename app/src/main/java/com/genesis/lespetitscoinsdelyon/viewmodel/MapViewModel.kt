@@ -1,11 +1,9 @@
 package com.genesis.lespetitscoinsdelyon.viewmodel
 
-import android.app.Application
-import android.content.Context
 import com.genesis.lespetitscoinsdelyon.MyApplication
-import com.google.android.gms.maps.model.LatLng
 import dao.FountainDao
 import dao.HospitalDao
+import dao.SecurityDao
 import io.reactivex.subjects.BehaviorSubject
 import model.Fountain
 import model.Hospital
@@ -18,14 +16,12 @@ class MapViewModel {
         private var shared: MapViewModel = MapViewModel()
 
         fun getInstance():MapViewModel {
-            if (shared == null) {
-                shared = MapViewModel()
-            }
             return shared
         }
     }
 
     var selectedThemes  : BehaviorSubject<ArrayList<Item>> = BehaviorSubject.create()
+    var selectedThemes2D  : BehaviorSubject<ArrayList<Item2D>> = BehaviorSubject.create()
     var availableThemes : BehaviorSubject<ArrayList<Theme>> = BehaviorSubject.create()
 
     init {
@@ -33,6 +29,7 @@ class MapViewModel {
         availableThemes.onNext(themes)
 
         selectedThemes.onNext(ArrayList<Item>())
+        selectedThemes2D.onNext(ArrayList<Item2D>())
 
         var fountainDao = FountainDao(MyApplication.context)
         fountainDao.list
@@ -41,14 +38,17 @@ class MapViewModel {
 
     fun selectTheme(theme: Theme) {
         var items = selectedThemes.value
-        var list:List<Item>
+        var items2D = selectedThemes2D.value
+        var list:List<Item> = ArrayList<Item>()
+        var list2D:List<Item2D> = ArrayList<Item2D>()
         when (theme) {
             Theme.fountains -> {
                 val dao = FountainDao(MyApplication.context)
                 list = dao.list.map({ it.convertToItem() })
             }
             Theme.security -> {
-                list = ArrayList()
+                val dao = SecurityDao(MyApplication.context)
+                list2D = dao.list.map( { it.convertToItem() })
             }
             Theme.hospitals -> {
                 val dao = HospitalDao(MyApplication.context)
@@ -60,19 +60,28 @@ class MapViewModel {
 
         }
         items.addAll(list)
+        items2D.addAll(list2D)
         selectedThemes.onNext(items)
+        selectedThemes2D.onNext(items2D)
     }
 
     fun unseselectTheme(theme: Theme) {
         var items: ArrayList<Item> = selectedThemes.value
+        var items2D: ArrayList<Item2D> = selectedThemes2D.value
 
         var themesToDelete = items.map({ item: Item ->
             if (item.theme == theme) return@map item
             else print("go die")
         })
+        var themesToDelete2D = items2D.map({ item: Item2D ->
+            if (item.theme == theme) return@map item
+            else print("go die")
+        })
 
         items.removeAll(themesToDelete)
+        items2D.removeAll(themesToDelete2D)
         selectedThemes.onNext(items)
+        selectedThemes2D.onNext(items2D)
     }
 }
 
@@ -92,10 +101,10 @@ fun Fountain.convertToItem(): Item {
 }
 
 
-/*
-fun Security.convertToItem(): Item {
+
+fun Security.convertToItem(): Item2D {
     if (this.nom != null) {
-        return Item(this.nom!!, Theme.security, this.polygon)
+        return Item2D(this.nom!!, Theme.security, this.polygon)
     }
+    return Item2D("", Theme.security, this.polygon)
 }
-*/

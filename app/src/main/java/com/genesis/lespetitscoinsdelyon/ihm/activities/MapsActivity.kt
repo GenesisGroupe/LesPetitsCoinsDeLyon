@@ -1,10 +1,12 @@
 package com.genesis.lespetitscoinsdelyon.ihm.activities
 
 import android.content.Context
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.genesis.lespetitscoinsdelyon.R
 import com.genesis.lespetitscoinsdelyon.viewmodel.Item
+import com.genesis.lespetitscoinsdelyon.viewmodel.Item2D
 import com.genesis.lespetitscoinsdelyon.viewmodel.MapViewModel
 import com.genesis.lespetitscoinsdelyon.viewmodel.Theme
 
@@ -14,12 +16,16 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.PolygonOptions
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
 
+    private var currentMarkersOptions = ArrayList<MarkerOptions>()
+    private var currentMarkers = ArrayList<Marker>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
@@ -28,32 +34,66 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
-        MapViewModel.getInstance().selectedThemes.subscribe({ itemsList ->
+        MapViewModel.getInstance().selectedThemes
+                .skip(1)
+                .subscribe({ itemsList ->
             drawPins(itemsList = itemsList)
+        })
+
+        MapViewModel.getInstance().selectedThemes2D.subscribe({ itemsList ->
+            drawPolygons(items2Dlist = itemsList)
         })
     }
 
     private fun drawPins(itemsList: ArrayList<Item>){
-
+        if (mMap != null) {
+            mMap.clear()
+        }
         itemsList.map {
-            if (it.localisation != null) {
-                var marker = MarkerOptions().position(it.localisation).title(it.name)
+            val markerOption = markerFromItem(it)
+            if (markerOption != null) {
+                currentMarkersOptions.add(markerOption)
+                currentMarkers.add(mMap.addMarker(markerOption))
+            }
+        }
+    }
+
+    private fun markerFromItem(item: Item): MarkerOptions? {
+        var marker: MarkerOptions? = null
+        if (item.localisation != null) {
+
+            marker = MarkerOptions().position(item.localisation).title(item.name)
+            when (item.theme) {
+                Theme.hospitals -> {
+                    marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+                }
+                Theme.security -> {
+                    marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
+                }
+                Theme.fountains -> {
+                    marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                }
+            }
+        }
+        return marker
+    }
+
+    private fun drawPolygons(items2Dlist:ArrayList<Item2D>){
+        items2Dlist.map {
+            if (it.polygon != null) {
+                var polygonOpt = PolygonOptions()
+                polygonOpt.addAll(it.polygon)
                 when (it.theme) {
-                    Theme.hospitals -> {
-                        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-                    }
+
                     Theme.security -> {
-                        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
-                    }
-                    Theme.fountains -> {
-                        marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+                        polygonOpt.strokeColor(Color.BLUE)
+                        polygonOpt.fillColor(Color.parseColor("#880000FF"))
                     }
                 }
-                mMap.addMarker(marker)
+                mMap.addPolygon(polygonOpt)
 
             }
         }
-
     }
 
     /**

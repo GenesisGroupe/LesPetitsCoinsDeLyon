@@ -1,15 +1,11 @@
 package com.genesis.lespetitscoinsdelyon.viewmodel
 
-import android.app.Application
-import android.content.Context
 import com.genesis.lespetitscoinsdelyon.MyApplication
-import com.google.android.gms.maps.model.LatLng
 import dao.FountainDao
 import dao.HospitalDao
 import io.reactivex.subjects.BehaviorSubject
 import model.Fountain
 import model.Hospital
-import model.Security
 
 
 class MapViewModel {

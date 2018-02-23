@@ -25,6 +25,7 @@ class MapViewModel {
     var availableThemes : BehaviorSubject<ArrayList<Theme>> = BehaviorSubject.create()
 
     init {
+
         var themes = arrayListOf(Theme.fountains, Theme.security, Theme.hospitals)
         availableThemes.onNext(themes)
 
@@ -37,6 +38,7 @@ class MapViewModel {
     }
 
     fun selectTheme(theme: Theme) {
+
         var items = selectedThemes.value
         var items2D = selectedThemes2D.value
         var list:List<Item> = ArrayList<Item>()
@@ -88,23 +90,23 @@ class MapViewModel {
 
 fun Hospital.convertToItem(): Item {
     if (this.nom != null) {
-        return Item(this.nom!!, Theme.hospitals, this.the_geom)
+        return Item(this.nom!!, Theme.hospitals, this.the_geom, this.gid)
     }
-    return Item("", Theme.hospitals, null)
+    return Item("", Theme.hospitals, null, this.gid)
 }
 
 fun Fountain.convertToItem(): Item {
     if (this.nom != null) {
-        return Item(this.nom!!, Theme.fountains, this.the_geom)
+        return Item(this.nom!!, Theme.fountains, this.the_geom, this.gid)
     }
-    return Item("", Theme.fountains, null)
+    return Item("", Theme.fountains, null, this.gid)
 }
 
 
 
 fun Security.convertToItem(): Item2D {
     if (this.nom != null) {
-        return Item2D(this.nom!!, Theme.security, this.polygon)
+        return Item2D(this.nom!!, Theme.security, this.polygon, this.gid)
     }
-    return Item2D("", Theme.security, this.polygon)
+    return Item2D("", Theme.security, this.polygon, this.gid)
 }

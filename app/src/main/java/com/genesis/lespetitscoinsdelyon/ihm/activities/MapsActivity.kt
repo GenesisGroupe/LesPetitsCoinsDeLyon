@@ -31,6 +31,7 @@ import io.reactivex.rxkotlin.Observables
 import io.reactivex.subjects.BehaviorSubject
 import java.util.*
 import com.google.android.gms.maps.model.PolygonOptions
+import kotlin.NoSuchElementException
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
 
@@ -39,7 +40,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
     var currentPosition  : BehaviorSubject<Location> = BehaviorSubject.create()
 
     companion object {
-        val MIN_DISTANCE = 1500
+        val MIN_DISTANCE = 900
         val MY_PERMISSIONS_REQUEST_LOCATION = 99
 
     }
@@ -67,19 +68,18 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
                 })
 
         setupPermissions()
-        //initLocationProvider()
 
-
-        MapViewModel.getInstance().selectedThemes2D.skip(1).subscribe({ itemsList ->
-            drawPolygons(items2Dlist = itemsList)
-        })
+        Observables.combineLatest(MapViewModel.getInstance().selectedThemes2D, currentPosition).skip(1)
+                .subscribe({
+                    drawPolygons(it.first, it.second)
+                })
     }
 
     private fun drawPins(itemsList: ArrayList<Item>, currentLocation: Location) {
-        if (mMap != null) {
+
+        if (itemsList.size == 0) {
             mMap.clear()
         }
-
         itemsList.map {
             if (it.localisation != null) {
 
@@ -95,10 +95,74 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
                 if (tempLocation.distanceTo(currentLocation) < MIN_DISTANCE) {
                     var marker = markerFromItem(it)
                     if (marker != null) {
-                        mMap.addMarker(marker)
+                        // marker is in radius
+                        // if it is already drawned, do nothing
+                        // if not, add it
+                        val markerOption = markerExistOnMap(marker)
+                        if (markerOption != null) {
+                            // already draw, return
+                            return
+                        }
+                        addMarker(marker)
+
                     }
+                } else {
+                    removeMarker(it)
+                }
+            }
+        }
+    }
 
+    private fun removeMarker(item: Item) {
+        try {
+            val drawnedMarker = currentMarkers.first {
+                it.title == item.gid.toString()
+            }
+            drawnedMarker.remove()
+            currentMarkers.remove(drawnedMarker)
+        } catch(e: Exception) {
 
+        }
+
+    }
+
+    private fun markerExistOnMap(markerOption: MarkerOptions): MarkerOptions? {
+        try {
+            val alreadyDrawnedPin = currentMarkersOptions.first {
+                Log.d("Marker", "title : " + it.title + " - markerOption.title : " + markerOption.title)
+                it.title == markerOption.title
+            }
+            return alreadyDrawnedPin
+        } catch (e: NoSuchElementException) {
+            return null
+        }
+    }
+
+    private fun addMarker(markerOption: MarkerOptions) {
+
+        currentMarkersOptions.add(markerOption)
+        currentMarkers.add(mMap.addMarker(markerOption))
+    }
+
+    private fun drawPolygons(items2Dlist:ArrayList<Item2D>, currentLocation: Location){
+
+        items2Dlist.map {
+            if (it.polygon != null && it.polygon.size > 0) {
+                //Filter on distance < 500m from user
+                var tempLocation = Location("")
+                tempLocation.latitude = it.polygon.first().latitude
+                tempLocation.longitude = it.polygon.first().longitude
+
+                if (tempLocation.distanceTo(currentLocation) < MIN_DISTANCE) {
+                    var polygonOpt = PolygonOptions()
+                    polygonOpt.addAll(it.polygon)
+                    when (it.theme) {
+                        Theme.security -> {
+                            polygonOpt.strokeColor(Color.BLUE)
+                            polygonOpt.fillColor(Color.parseColor("#880000FF"))
+                        }
+                    }
+                    mMap.addPolygon(polygonOpt)
                 }
             }
         }
@@ -108,7 +172,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
         var marker: MarkerOptions? = null
         if (item.localisation != null) {
 
-            marker = MarkerOptions().position(item.localisation).title(item.name)
+            marker = MarkerOptions().position(item.localisation).title(item.gid.toString())
             when (item.theme) {
                 Theme.hospitals -> {
                     marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
@@ -124,29 +188,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
         return marker
     }
 
-    private fun drawPolygons(items2Dlist:ArrayList<Item2D>){
-        items2Dlist.map {
-            if (it.polygon != null) {
-                var polygonOpt = PolygonOptions()
-                polygonOpt.addAll(it.polygon)
-                when (it.theme) {
-
-                    Theme.security -> {
-                        polygonOpt.strokeColor(Color.BLUE)
-                        polygonOpt.fillColor(Color.parseColor("#880000FF"))
-                    }
-                }
-                mMap.addPolygon(polygonOpt)
-
-
-
-
-            }
-        }
-    }
-
-
-
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         // Add a marker in Sydney and move the camera
@@ -156,9 +197,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
         
         initLocationProvider()
     }
-
-
-
 
     private fun setupPermissions() {
         val permission = ContextCompat.checkSelfPermission(this,
@@ -203,11 +241,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, ILocationChanged {
 
     override fun onLocationChanged(location: Location) {
         currentPosition.onNext(location)
-
         val latLng = LatLng(location.latitude, location.longitude)
-
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng))
-        //mMap.addMarker(MarkerOptions().position(latLng).title("Ma position"))
 
     }
 }

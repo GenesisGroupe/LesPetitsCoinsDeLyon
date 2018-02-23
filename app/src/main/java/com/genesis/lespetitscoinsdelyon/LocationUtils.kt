@@ -9,6 +9,8 @@ import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
+import android.os.Parcel
+import android.os.Parcelable
 import android.support.v4.content.ContextCompat
 import android.util.Log
 import com.genesis.lespetitscoinsdelyon.`interface`.ILocationChanged
@@ -40,8 +42,4 @@ class LocationUtils(val context: Context, val listener: ILocationChanged) {
             Log.d("myTag", "Security Exception, no location available");
         }
     }
-
-
-
-
 }
